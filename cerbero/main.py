@@ -102,6 +102,7 @@ class Main(object):
     def run_command(self):
         command = self.args.command
         try:
+            print("--------------- run_command  ", command , self.config, self.args )
             res = commands.run(command, self.config, self.args)
         except UsageError, exc:
             self.log_error(exc, True, command)

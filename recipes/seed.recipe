@@ -22,6 +22,9 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY
 # OF SUCH DAMAGE.
 
+# Following url was not working for me , git@gitlab.gnome.org: Permission denied (publickey,gssapi-keyex,gssapi-with-mic).
+# replaced origin 'git@gitlab.gnome.org:GNOME/seed.git' with 'https://gitlab.gnome.org/GNOME/seed.git'
+
 # -*- Mode: Python -*- vi:si:et:sw=4:sts=4:ts=4:syntax=python
 
 class Recipe(recipe.Recipe):
@@ -29,7 +32,7 @@ class Recipe(recipe.Recipe):
     version = '3.8.2_a015bd'
     stype = SourceType.GIT
     licenses = [License.LGPLv2Plus]
-    remotes = { 'origin': 'git://git.gnome.org/seed' }
+    remotes = { 'origin': 'https://gitlab.gnome.org/GNOME/seed.git' }
     commit = 'a015bdb33c3bdd7f250a842c7be8062d483598b8'
     autoreconf = True
     configure_options = '--with-pic --disable-static --enable-shared \
